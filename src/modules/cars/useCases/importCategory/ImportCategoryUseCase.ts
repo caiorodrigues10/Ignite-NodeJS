@@ -29,6 +29,7 @@ class ImportCategoryUseCase {
           });
         })
         .on('end', () => {
+          fs.promises.unlink(file.path);
           resolve(categories);
         })
         .on('error', err => {
@@ -42,7 +43,7 @@ class ImportCategoryUseCase {
 
     console.log(categories);
 
-    categories.map(category => {
+    categories.map(async category => {
       const { name, description } = category;
 
       const existCategory = this.categoriesRepostory.findByName(name);
