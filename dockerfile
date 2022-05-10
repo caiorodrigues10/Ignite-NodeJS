@@ -51,3 +51,6 @@ CMD ["npm", "run", "dev"]
 
 # Comando para remover tudo que foi criado
 # docker-compose down
+
+# Comando para inicializar o docker compose 
+# docker-compose start
