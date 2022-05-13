@@ -2,7 +2,7 @@
 FROM node
 
 # Diretório onde que vou armazenar os dados para poder rodar dentro do docker
-WORKDIR /Users/imobpowerimobpower/Desktop/dockerIgnite
+WORKDIR /usr/app
 
 # Copiando o package.json para o diretório criado
 COPY package.json ./
